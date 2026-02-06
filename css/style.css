@@ -1,0 +1,115 @@
+@import url('./_vars.css');
+@import url('./_normalize.css');
+
+html, body {
+    font-family: var(--main-font-family);
+    color: var(--main-color);
+    font-size: var(--main-font-size);
+    text-align: center;
+}
+
+header {
+    margin-top: 15px;
+}
+
+.container {
+    max-width: var(--width-container);
+    margin: 0 auto;
+    padding: 19px 0px 12px 5px;
+    max-width: 60%;
+    background-color: #3B3F45;
+}
+
+header > .container {
+    background-color: #4A4F56;
+    
+}
+
+h1{
+    margin: 0 auto;
+    font-size: 24px;
+}
+
+h2{
+    margin: 4px auto 0 auto;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+form {
+    display: inline-block;
+    text-align: left
+}
+input[type="checkbox"] {
+    display: none;
+}
+label {
+    display: block; 
+    width: 100%;
+    box-sizing: border-box;
+    color: white;
+    padding: 15px 0px 15px 50px;
+    position: relative; 
+    display: inline-block;
+    cursor: pointer;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+}
+label:nth-of-type(odd) {
+    background-color: #88839E; 
+}
+label:nth-of-type(even) {
+    background-color: #7A7593; 
+}
+label:hover {
+    background-color: #625E77;
+    border-color: white;
+}
+label::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    width: 19px;
+    height: 19px;
+    background-color: white;
+}
+label::after {
+    content: url("../assets/img/check_mark.png");
+    position: absolute;
+    left: 15px; 
+    top: 15px;
+    width: 19px;
+    height: 19px;
+    text-align: center;
+    line-height: 19px;
+    
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+}
+input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+    color: rgb(255, 255, 255, 0.5);
+}
+input[type="checkbox"]:checked + label::before {
+    content: url("../assets/img/check_mark.png");
+    text-align: center;
+    line-height: 19px;
+}
+input[type="checkbox"]:checked + label::after {
+    opacity: 1;
+}
+input[type="submit"] {
+    background: #4A4F56;
+    border: none;
+    color: var(--main-color);
+    width: 100%;
+    cursor: pointer;
+    height: 50px;
+    padding: 15px auto;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+input[type="submit"]:active {
+    transform: scale(0.98);
+}
