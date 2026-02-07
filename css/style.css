@@ -90,18 +90,12 @@ label::after {
     height: 19px;
     text-align: center;
     line-height: 19px;
-    
     opacity: 0;
     transition: opacity 0.2s ease-in;
 }
 input[type="checkbox"]:checked + label {
     text-decoration: line-through;
     color: rgb(255, 255, 255, 0.5);
-}
-input[type="checkbox"]:checked + label::before {
-    content: url("../assets/img/check_mark.png");
-    text-align: center;
-    line-height: 19px;
 }
 input[type="checkbox"]:checked + label::after {
     opacity: 1;
